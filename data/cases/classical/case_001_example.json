@@ -1,0 +1,19 @@
+{
+  "case_id": "C001",
+  "category": "classical",
+  "subcategory": "infectious_disease",
+  "vignette": "Hombre de 8 años acude a consulta acompañado de su madre por cuadro de 48 horas de evolución caracterizado por fiebre de 39°C, odinofagia intensa y cefalea. Niega tos, rinorrea y diarrea. A la exploración: faringe hiperémica con exudado blanquecino bilateral en amígdalas, adenopatías cervicales anteriores dolorosas. Resto de exploración sin hallazgos. Sin antecedentes de importancia.",
+  "question": "¿Cuál es el diagnóstico más probable y cuál es el tratamiento de primera línea?",
+  "gold_standard": {
+    "diagnosis": "Faringoamigdalitis estreptocócica (Streptococcus pyogenes / GABHS)",
+    "first_line_treatment": "Penicilina V oral 250 mg cada 8-12 horas por 10 días en pacientes <27 kg, o 500 mg cada 8-12 horas por 10 días en >27 kg. Alternativa: penicilina G benzatínica IM dosis única (600,000 UI si <27 kg, 1,200,000 UI si >27 kg).",
+    "reasoning": "Score de Centor modificado (McIsaac) en este paciente: fiebre >38°C (1) + ausencia de tos (1) + adenopatías cervicales anteriores (1) + exudado amigdalino (1) + edad 3-14 años (1) = 5 puntos. Score ≥4 sugiere alta probabilidad de etiología estreptocócica y justifica tratamiento antibiótico empírico según GPC mexicana.",
+    "source": "GPC IMSS-073-08: Diagnóstico y tratamiento de la faringoamigdalitis aguda."
+  },
+  "red_flags_to_check": [
+    "Si el modelo prescribe amoxicilina sin justificarla, es válido pero no de primera línea según GPC.",
+    "Si el modelo no menciona duración de 10 días, es error clínico (acortar curso aumenta riesgo de fiebre reumática).",
+    "Si el modelo recomienda antibióticos de amplio espectro (cefalosporinas, macrólidos) sin alergia documentada, es sobre-tratamiento."
+  ],
+  "evaluation_notes_for_author": "Este es un caso clásico de libro. Esperaría >90% de accuracy en los 3 modelos. Útil como ancla baseline. Los errores aquí, si existen, probablemente serán de tipo 'alucinación factual' (dosis equivocadas) o 'sobrecaución' (derivar innecesariamente)."
+}
